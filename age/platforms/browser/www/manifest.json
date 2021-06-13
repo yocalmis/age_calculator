@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Ölüm Yaşı Hesapla",
+  "short_name": "Ölüm Yaşı Hesapla",
+  "version": "io.yas",
+  "description": "Kaç yaşında öleceğinizi hesaplayın.",
+  "author": "Yusuf Öcalmış",
+  "icons": [],
+  "start_url": "index.html"
+}

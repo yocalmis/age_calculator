@@ -1,0 +1,112 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yaş Hesapla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+label {font-size:22px;}
+#check {font-size:19px;}
+option {font-size:22px;}
+select {max-width:300px;}
+body {background-color:#deeeed;}
+
+</style>
+
+<script>
+
+
+function hesapla (){
+  var url = window.location.href;
+  var sayi = url.split('sayi=').pop();
+sayi = parseInt(sayi);
+ 
+var sig_yil = $('#sig_yil').val();
+if(sig_yil==1){sayi=sayi+7;}
+else if(sig_yil==2){sayi=sayi-1;}
+else if(sig_yil==3){sayi=sayi-2;}
+else if(sig_yil==4){sayi=sayi-5;}
+else {sayi=sayi-7;}
+
+
+var new_url = "soru_19.html" + '?sayi=' + sayi;
+
+
+  window.location.href = new_url;
+
+
+}
+
+
+</script>
+
+  </head>
+  <body>
+  
+  <!--Algoritma
+  
+
+  
+  --Erkek -3 Kadın +3 yıl
+  --Gelir 1 -4, 2 -2, 3 0 , 4 +4, 5 +8
+  --Yer 1 -4, 2 -2, 3 +3 , 4 +6
+  --Tip 1 -6, 2 -3, 3 2 , 4 2, 5 +1, 6 -4
+  --Çalışma -6,-3,3,3,-4,6
+  --Çalışma saat 2,0,-2,-4
+  --Çalışma yıl 4,1,-1,-4 
+  --Genetik yoksa 6,-2,-2,-2 ,-2
+  --Stres -3,0,+3
+  --Sosyal 3,0,-3
+  --Spor 0,4,-4
+  --Beslenme 4,0,-4  
+  --Sigara 7,-1,-2,-5,-7   
+  --Alkol 7,-1,-4,-7  
+  --Evli 3,-3   
+  --Çocuk 3,-2,-6
+   --Aile -4,-2,0,2,4
+   
+     Başlangıç 80 yıl
+   + ise /2 , - ise /2
+  -->
+  
+  
+  
+ 	<!----><br><br><center><b><font size="32">YAŞ HESAPLA</font></b></center><br><br>   
+
+	<center>
+	<form  onsubmit="return false;">
+  
+
+  
+                 <div class="form-group">
+    <label for="exampleSelect1"> Sigarayı Alışkanlığınız</label>
+    <select  name="sig_yil" id="sig_yil"  class="form-control"  required="required">
+      <option value="1">Hiç kullanmadım</option>	
+      <option value="2">Çok Az</option>
+      <option value="3">1-5 Yıl</option>	  
+      <option value="4">5-15 Yıl</option>
+      <option value="5">15 + Yıl</option>	  
+   </select>
+  </div>
+  
+    
+  
+  <button onclick="hesapla();" class="btn btn-primary btn-lg" >Hesapla</button>
+</form>
+	
+	</center>
+	
+	
+	    <script type="text/javascript" src="cordova.js"></script>
+ 	
+	
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
